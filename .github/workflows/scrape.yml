@@ -1,0 +1,36 @@
+name: Run scraping pipeline
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * 1"
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: python -m pytest -q
+
+      - name: Run pipeline
+        run: python main.py
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: scraper-output
+          path: |
+            output/final_dataset.csv
+            output/summary_report.json
+            logs/scraper.log
