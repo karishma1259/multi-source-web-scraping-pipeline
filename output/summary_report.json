@@ -1,0 +1,44 @@
+{
+    "run": {
+        "started_at": "2026-10-08T10:01:50+00:00",
+        "ended_at": "2026-10-08T10:21:18+00:00",
+        "duration_seconds": 1168.3,
+        "options": {
+            "max_pages": null,
+            "output_dir": "C:\\Users\\Hello\\Downloads\\scraping_assignment\\scraping_assignment\\output",
+            "skip_details": false,
+            "delay": 0.5
+        }
+    },
+    "per_source": {
+        "Books to Scrape": {
+            "raw_collected": 1000,
+            "after_cleaning": 1000,
+            "rejected": 0,
+            "rejected_by_reason": {},
+            "duplicates_removed": 1,
+            "final": 999,
+            "pages_scraped": 50,
+            "pages_failed": 0
+        },
+        "Quotes to Scrape": {
+            "raw_collected": 100,
+            "after_cleaning": 100,
+            "rejected": 0,
+            "rejected_by_reason": {},
+            "duplicates_removed": 0,
+            "final": 100,
+            "pages_scraped": 10,
+            "pages_failed": 0
+        }
+    },
+    "totals": {
+        "raw_collected": 1100,
+        "after_cleaning": 1100,
+        "rejected": 0,
+        "rejected_validation": 0,
+        "duplicates_detected": 1,
+        "final_record_count": 1099
+    },
+    "reconciliation_ok": true
+}
